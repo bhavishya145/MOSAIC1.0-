@@ -1,0 +1,6 @@
+{
+  "name": "MOSAIC",
+  "description": "Different thoughts. One beautiful picture. Discover thought-provoking stories organized into a living editorial mosaic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Newsreader', 'Fraunces', Georgia, serif;
+    --font-display: 'Cinzel', 'Newsreader', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* MOSAIC Editorial Palette (Light) */
+    --bg-main: #FBF9F5;
+    --bg-card: #FFFFFF;
+    --bg-subtle: #F3EFE6;
+    --text-primary: #1C1917;
+    --text-secondary: #57534E;
+    --text-muted: #857F77;
+    --border-color: rgba(30, 27, 24, 0.08);
+    --border-strong: rgba(30, 27, 24, 0.16);
+
+    /* Accents */
+    --accent-forest: #22382D;
+    --accent-forest-hover: #192B22;
+    --accent-terracotta: #C85A32;
+    --accent-terracotta-hover: #B04A25;
+    --accent-ochre: #D99B26;
+  }
+
+  .dark {
+    /* MOSAIC Editorial Palette (Dark) */
+    --bg-main: #0F1012;
+    --bg-card: #18191D;
+    --bg-subtle: #212328;
+    --text-primary: #F5F3EF;
+    --text-secondary: #A8A39C;
+    --text-muted: #6E6961;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.15);
+
+    --accent-forest: #365747;
+    --accent-forest-hover: #436A57;
+    --accent-terracotta: #DE6D43;
+    --accent-terracotta-hover: #E77E57;
+    --accent-ochre: #E5AC3A;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .editorial-heading {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Editorial Styles & Mosaic Grid helpers */
+.font-editorial {
+  font-family: 'Newsreader', 'Fraunces', Georgia, serif;
+}
+
+.font-brand {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.12em;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Subtle editorial paper grain overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark .bg-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar for editorial elegance */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 135, 125, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 135, 125, 0.45);
+}
+
+/* Print/Reading line length */
+.reading-prose {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.85;
+}
+
+@media (max-width: 640px) {
+  .reading-prose {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+}
